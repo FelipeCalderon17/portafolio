@@ -6,16 +6,12 @@ export const navMenu = [
     href: "/",
   },
   {
-    id: "Servicios",
-    href: "/services",
+    id: "Estudios",
+    href: "/estudios",
   },
   {
-    id: "Acerca de",
-    href: "/about",
-  },
-  {
-    id: "Resumen",
-    href: "/resume",
+    id: "Proyectos",
+    href: "/proyecto",
   },
 ];
 
@@ -378,11 +374,10 @@ export const extracurriculars = [
 
 export const educations = [
   {
-    degree: "B.S. Computer Engineering",
-    school: "University at Buffalo, The State University of New York",
-    startDate: new Date(2011, 10),
-    endDate: new Date(2015, 4),
-    location: "Buffalo, NY",
+    tipo: "B.S. Computer Engineering",
+    detalle: "University at Buffalo, The State University of New York",
+    fechaFin: new Date(2011, 10),
+    notas: "Buffalo, NY",
   },
 ];
 
