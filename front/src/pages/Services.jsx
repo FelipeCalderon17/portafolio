@@ -67,6 +67,7 @@ export default function Services() {
           </div>
         </form>
       </section>
+
       <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
         <h2 className="text-center">Estudios</h2>
         <SpecialtiesList />
