@@ -39,7 +39,7 @@ const Login = () => {
       <main className="flex flex-col items-center justify-center h-screen gap-10 sm:gap-11 md:gap-12 lg:gap-13 h-full align-bottom justify-self-center">
         <form
           onSubmit={login}
-          className="flex flex-col flex-grow flex-shrink items-center gap-7 w-full max-w-[30em] flex flex-col items-center justify-center h-screen gap-10 sm:gap-11 md:gap-12 lg:gap-13 h-full align-bottom justify-self-center"
+          className=" gap-7 w-full  flex flex-col items-center justify-center h-screen  h-full align-bottom justify-self-center"
         >
           <h1>Inicio de Sesión</h1>
           <label className="max-w-[30em] w-[100%]">
@@ -75,7 +75,7 @@ const Login = () => {
             </button>
           </div>
           <NavLink to={"/registro"}>
-            <label className="max-w-[30em] w-[100%]">No tengo Cuenta</label>
+            <button className="max-w-[30em] w-[100%]">No tengo Cuenta</button>
           </NavLink>
         </form>
       </main>

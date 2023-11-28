@@ -36,10 +36,10 @@ const Registro = () => {
       <div className="ascending-squares" aria-hidden="true">
         {squares}
       </div>
-      <main className="flex flex-col flex-nowrap items-center justify-center mb-10 gap-10 sm:gap-11 sm:mb-11 md:gap-12 md:mb-12 lg:gap-13 lg:mb-13 ">
+      <main className="flex flex-col items-center justify-center h-screen gap-10 sm:gap-11 md:gap-12 lg:gap-13 h-full align-bottom justify-self-center">
         <form
           onSubmit={registrar}
-          className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
+          className="gap-7 w-full  flex flex-col items-center justify-center h-screen  h-full align-bottom justify-self-center"
         >
           <h1>Registro</h1>
           <label className="max-w-[30em] w-[100%]">
