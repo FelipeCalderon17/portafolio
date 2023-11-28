@@ -5,6 +5,7 @@ import HelperForm from "../helpers/HelperForm";
 import { Global } from "../helpers/Global";
 export default function About() {
   const { form, cambiar } = HelperForm({});
+  /* const [projects, setProjects] = useState([]); */
 
   const agregarProyecto = async (e) => {
     e.preventDefault();
@@ -21,15 +22,15 @@ export default function About() {
     const dataCons = await request.json();
     /* console.log(dataCons); */
     cambiar({});
+    /* const response = await fetch(Global.url + "/estudio/listar");
+    const data = await response.json();
+    setProjects(data.resultado); */
   };
   return (
     <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
       <h2 className="text-center">Agregar Proyecto</h2>
       {/* <ServiceList services={generalServices} /> */}
-      <form
-        onSubmit={agregarProyecto}
-        className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
-      >
+      <form onSubmit={agregarProyecto} className="w-[100%] flex flex-col flex-nowrap items-center gap-7">
         <label className="max-w-[30em] w-[100%]">
           Imagen
           <input
