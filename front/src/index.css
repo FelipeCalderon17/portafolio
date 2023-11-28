@@ -876,6 +876,9 @@
   :root.dark .glassy-icon:before {
     background: hsl(var(--color-white) / 0.4);
   }
+  .bg-modal {
+    background: hsl(var(--color-primBlue-1050));
+  }
 
   .glassy-icon:hover:before,
   .glassy-icon:focus:before {

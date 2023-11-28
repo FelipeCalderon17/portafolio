@@ -78,21 +78,15 @@ export const socialMedias = [
   },
   {
     href: "https://github.com/StivenHerrera20",
-    ariaLabel: "Goes to Ed Park&apos;s GitHub profile",
-    title: "GitHub Profile",
+    ariaLabel: "Vea al perfil de Stiven en GitHub",
+    title: "Perfil GitHub",
     Icon: Icons.GitHubIcon,
   },
   {
     href: "https://github.com/FelipeCalderon17",
-    ariaLabel: "Goes to Ed Park&apos;s GitHub profile",
-    title: "GitHub Profile",
+    ariaLabel: "Vea al perfil de Felipe en GitHub",
+    title: "Perfil GitHub",
     Icon: Icons.GitHubIcon,
-  },
-  {
-    href: "https://twitter.com/edward_park1",
-    ariaLabel: "Goes to Ed Park&apos;s Twitter profile",
-    title: "Twitter Profile",
-    Icon: Icons.TwitterIcon,
   },
 ];
 
@@ -374,10 +368,18 @@ export const extracurriculars = [
 
 export const educations = [
   {
+    id: 0,
     tipo: "B.S. Computer Engineering",
     detalle: "University at Buffalo, The State University of New York",
     fechaFin: new Date(2011, 10),
     notas: "Buffalo, NY",
+  },
+  {
+    id: 5,
+    tipo: "dasd",
+    detalle: "adsdasd",
+    fechaFin: new Date(2015, 10),
+    notas: "dsadas",
   },
 ];
 

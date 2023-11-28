@@ -36,10 +36,6 @@ export default function Home() {
       <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
         <h2>Contacto</h2>
         <Socials />
-        <p className="text-center">
-          ¿Está listo para desbloquear el sitio web de sus sueños? ¡Charlemos!
-        </p>
-        <ContactForm />
       </section>
     </>
   );
