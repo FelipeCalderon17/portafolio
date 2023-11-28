@@ -100,43 +100,57 @@ export default function SpecialtiesList({ studies, setStudies }) {
   return (
     <div className="w-[100%] grid justify-items-center items-stretch justify-center gap-10 sm:gap-9 md:gap-10 grid-cols-[repeat(auto-fit,minmax(250px,250px))] sm:grid-cols-[repeat(auto-fit,minmax(280px,280px))] md:grid-cols-[repeat(auto-fit,minmax(250px,250px))] lg:grid-cols-[repeat(auto-fit,minmax(215px,215px))] row-auto">
       {studies.map((education, id) => (
-        <div key={id}>
+        <div
+          className=" flex flex-col flex-nowrap items-center justify-center gap-7 glassy-screen !w-[350px] !min-h-[300px] !p-5 sm:!w-[250px] sm:!min-h-[200px] sm:!p-4 md:!w-[250px] md:!min-h-[200px] md:!p-5 lg:!w-[250px] lg:!min-h-[200px] lg:!p-7"
+          key={id}
+        >
           <p>Tipo: {education.tipo}</p>
           <p>Detalle: {education.detalle}</p>
           <p>Fecha Fin: {new Date(education.fechaFin).toLocaleDateString()}</p>
           <p>Notas: {education.notas}</p>
-          <button
-            onClick={() => {
-              openModal(); // Abre la modal al hacer clic en el botón de editar
-              setIdEdit(education._id); // Establece el ID para editar
-              setData({
-                id: education._id,
-                tipo: education.tipo,
-                detalle: education.detalle,
-                notas: education.notas,
-              });
-            }}
-          >
-            Editar
-          </button>
-          <br></br>
-          <button
-            onClick={() => {
-              alert(education._id);
-              eliminarEstudio(education._id);
-            }}
-          >
-            Eliminar
-          </button>
+
+          <div className="flex items-center justify-center">
+            <button
+              className="glassy-icon m-3"
+              onClick={() => {
+                openModal(); // Abre la modal al hacer clic en el botón de editar
+                setIdEdit(education._id); // Establece el ID para editar
+                setData({
+                  id: education._id,
+                  tipo: education.tipo,
+                  detalle: education.detalle,
+                  notas: education.notas,
+                });
+              }}
+            >
+              Editar
+            </button>
+
+            <button
+              className="glassy-icon m-3"
+              onClick={() => {
+                alert(education._id);
+                eliminarEstudio(education._id);
+              }}
+            >
+              Eliminar
+            </button>
+          </div>
         </div>
       ))}
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 w-full h-full flex items-center justify-center ">
-          <div className="absolute inset-0  bg-black opacity-75" onClick={closeModal}></div>
+          <div
+            className="absolute inset-0  bg-black opacity-75"
+            onClick={closeModal}
+          ></div>
           <div className=" p-8 rounded shadow-lg z-20 bg-modal">
             {/* Contenido de la modal */}
-            <form onSubmit={editarEstudio} className="w-[100%] flex flex-col flex-nowrap items-center gap-7">
+            <form
+              onSubmit={editarEstudio}
+              className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
+            >
               <h3 className="text-xl font-semibold mb-4">Editar Estudio</h3>
               <label className="max-w-[30em] w-[100%]" hidden>
                 id
@@ -197,10 +211,16 @@ export default function SpecialtiesList({ studies, setStudies }) {
               </label>
               {/* Botón para cerrar la modal */}
               <div className="flex items-center justify-center">
-                <button type="submit" className="mt-4  bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3">
+                <button
+                  type="submit"
+                  className="mt-4  bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3"
+                >
                   Editar
                 </button>
-                <button onClick={closeModal} className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3">
+                <button
+                  onClick={closeModal}
+                  className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3"
+                >
                   Cancelar
                 </button>
               </div>

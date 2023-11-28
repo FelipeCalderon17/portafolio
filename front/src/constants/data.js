@@ -3,15 +3,15 @@ import * as Icons from "../components/Icons";
 export const navMenu = [
   {
     id: "Inicio",
-    href: "/",
+    href: "/inicio",
   },
   {
     id: "Estudios",
-    href: "/estudios",
+    href: "/inicio/estudios",
   },
   {
     id: "Proyectos",
-    href: "/proyecto",
+    href: "/inicio/proyecto",
   },
 ];
 

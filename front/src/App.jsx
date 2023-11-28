@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import ErrorPage from "./pages/404";
 import ThankYou from "./pages/ThankYou";
+import Login from "./pages/Login";
+import Registro from "./pages/Registro";
 
 function App() {
   // Dark Mode is default
@@ -37,7 +39,16 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      index: true,
       path: "/",
+      element: <Login></Login>,
+    },
+    {
+      path: "/registro",
+      element: <Registro></Registro>,
+    },
+    {
+      path: "/inicio",
       element: (
         <PageStructure
           isDarkMode={isDarkMode}
