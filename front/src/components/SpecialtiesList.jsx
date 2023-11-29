@@ -129,7 +129,6 @@ export default function SpecialtiesList({ studies, setStudies }) {
             <button
               className="glassy-icon m-3"
               onClick={() => {
-                alert(education._id);
                 eliminarEstudio(education._id);
               }}
             >
@@ -141,16 +140,10 @@ export default function SpecialtiesList({ studies, setStudies }) {
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 w-full h-full flex items-center justify-center ">
-          <div
-            className="absolute inset-0  bg-black opacity-75"
-            onClick={closeModal}
-          ></div>
+          <div className="absolute inset-0  bg-black opacity-75" onClick={closeModal}></div>
           <div className=" p-8 rounded shadow-lg z-20 bg-modal">
             {/* Contenido de la modal */}
-            <form
-              onSubmit={editarEstudio}
-              className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
-            >
+            <form onSubmit={editarEstudio} className="w-[100%] flex flex-col flex-nowrap items-center gap-7">
               <h3 className="text-xl font-semibold mb-4">Editar Estudio</h3>
               <label className="max-w-[30em] w-[100%]" hidden>
                 id
@@ -211,16 +204,10 @@ export default function SpecialtiesList({ studies, setStudies }) {
               </label>
               {/* Botón para cerrar la modal */}
               <div className="flex items-center justify-center">
-                <button
-                  type="submit"
-                  className="mt-4  bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3"
-                >
+                <button type="submit" className="mt-4  bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3">
                   Editar
                 </button>
-                <button
-                  onClick={closeModal}
-                  className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3"
-                >
+                <button onClick={closeModal} className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded glassy-icon m-3">
                   Cancelar
                 </button>
               </div>

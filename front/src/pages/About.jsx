@@ -9,12 +9,17 @@ export default function About() {
 
   const agregarProyecto = async (e) => {
     e.preventDefault();
-    let nuevoPerfil = form;
-    /* console.log(nuevoPerfil); */
+    let nombre = document.querySelector("#nombre");
+    let detalle = document.querySelector("#detalle");
+    let link = document.querySelector("#link");
     //guardar en la api
     const request = await fetch(Global.url + "/proyecto/registrar", {
       method: "POST",
-      body: JSON.stringify(nuevoPerfil),
+      body: JSON.stringify({
+        nombre: nombre.value,
+        detalle: detalle.value,
+        link: link.value,
+      }),
       headers: {
         "Content-Type": "application/json",
       },
